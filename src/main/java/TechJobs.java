@@ -16,6 +16,7 @@ public class TechJobs {
         HashMap<String, String> columnChoices = new HashMap<>();
         columnChoices.put("core competency", "Skill");
         columnChoices.put("employer", "Employer");
+
         columnChoices.put("location", "Location");
         columnChoices.put("position type", "Position Type");
         columnChoices.put("all", "All");
@@ -119,19 +120,21 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+        if (someJobs == null) {
+            System.out.println("No Results");
+        } else {
+        for (Map<String, String> map : someJobs){
+            System.out.println("*****");
+            for (Map.Entry<String, String> innerMap : map.entrySet() ) {
+                System.out.println(innerMap.getKey() + ": " + innerMap.getValue());
+            }
+            System.out.println("*****");
+            System.out.println();
 
-        System.out.println("*****");
-        System.out.println("position type: ");
-        System.out.println("name: ");
-        System.out.println("employer: ");
-        System.out.println("locatiom: ");
-        System.out.println("core competency: ");
-        System.out.println("*****");
-        System.out.println();
 
-//        if (results are empty) {
-//            System.out.println("No Results");
-//        }
+        }
+
 
     }
+}
 }
