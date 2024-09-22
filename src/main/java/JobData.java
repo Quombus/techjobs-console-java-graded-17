@@ -98,10 +98,12 @@ public class JobData {
 
         for (HashMap<String, String> row : allJobs) {
 
-            if ((row.get("core competency").toLowerCase()).contains(value) ||
-                    (row.get("employer").toLowerCase()).contains(value) ||
-                    (row.get("location").toLowerCase()).contains(value) ||
-                    (row.get("position type").toLowerCase()).contains(value)) {
+            if ((row.get("core competency").toLowerCase().trim()).contains(value) ||
+                    (row.get("employer").toLowerCase().trim()).contains(value) ||
+                    (row.get("location").toLowerCase().trim()).contains(value) ||
+                    (row.get("name").toLowerCase().trim()).contains(value) ||
+                    (row.get("position type").toLowerCase().trim()).contains(value)) {
+
                 jobs.add(row);
             }
         }
