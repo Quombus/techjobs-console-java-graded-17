@@ -124,14 +124,12 @@ public class TechJobs {
             System.out.println("No Results");
         } else {
         for (Map<String, String> map : someJobs){
+            System.out.println("");
             System.out.println("*****");
             for (Map.Entry<String, String> innerMap : map.entrySet() ) {
                 System.out.println(innerMap.getKey() + ": " + innerMap.getValue());
             }
             System.out.println("*****");
-            System.out.println();
-
-
         }
 
 
